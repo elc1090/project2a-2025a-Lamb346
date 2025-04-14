@@ -131,7 +131,6 @@ function requestUserRepos(username) {
   return Promise.resolve(
     fetch(`https://api.github.com/users/${username}/repos`, {
       headers: {
-        Authorization: `Bearer ${TOKEN}`,
         Accept: "application/vnd.github.v3+json",
       },
     })
@@ -143,7 +142,6 @@ function requestUserRepoCommits(username, repo) {
   return Promise.resolve(
     fetch(`https://api.github.com/repos/${username}/${repo}/commits`, {
       headers: {
-        Authorization: `Bearer ${TOKEN}`,
         Accept: "application/vnd.github.v3+json",
       },
     })
